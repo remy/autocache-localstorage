@@ -28,17 +28,17 @@ if (typeof global.localStorage === 'undefined') {
   global.localStorage = new LC();
 }
 
-var cache = require('autocache');
-var store = require('../')(cache);
 var test = require('tape');
 
 if (module.parent) {
   module.exports = runtests;
 } else {
-  runtests(cache);
+  runtests(require('autocache'));
 }
 
 function runtests(cache) {
+  var store = require('../')(cache);
+
   test('localstorage sync cache', function (t) {
     t.plan(2);
 
