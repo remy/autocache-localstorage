@@ -1,6 +1,6 @@
 {
   "name": "autocache-localstorage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "localStorage adapter for autocache",
   "main": "index.js",
   "scripts": {
