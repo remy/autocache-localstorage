@@ -1,0 +1,22 @@
+{
+  "name": "autocache-localstorage",
+  "version": "1.0.0",
+  "description": "localStorage adapter for autocache",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.test.js | tap-spec"
+  },
+  "keywords": [
+    "autocache",
+    "cache",
+    "localstorage"
+  ],
+  "author": "Remy Sharp",
+  "license": "MIT",
+  "devDependencies": {
+    "autocache": "^0.4.0",
+    "tap-bail": "0.0.0",
+    "tap-spec": "^2.2.1",
+    "tape": "^3.5.0"
+  }
+}
