@@ -4,7 +4,7 @@
   "description": "localStorage adapter for autocache",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*.test.js | tap-spec"
+    "test": "node test/*.test.js | tap-spec"
   },
   "keywords": [
     "autocache",
