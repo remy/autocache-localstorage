@@ -141,7 +141,7 @@ function runtests(cache) {
     });
   });
 
-  test.only('localstorage errors', function (t) {
+  test('localstorage errors', function (t) {
     t.plan(3);
     cache.reset().clear();
 
