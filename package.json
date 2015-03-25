@@ -20,6 +20,5 @@
     "tape": "^3.5.0"
   },
   "dependencies": {
-    "autocache": "^0.6.0"
   }
 }
