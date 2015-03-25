@@ -18,5 +18,8 @@
     "tap-bail": "0.0.0",
     "tap-spec": "^2.2.1",
     "tape": "^3.5.0"
+  },
+  "dependencies": {
+    "autocache": "^0.6.0"
   }
 }

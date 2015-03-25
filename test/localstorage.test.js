@@ -103,7 +103,7 @@ function runtests(cache) {
     var n = 20;
 
     cache.define('number', function (done) {
-      done(n++);
+      done(null, n++);
     });
 
     cache.get('number', function (error, result) {
