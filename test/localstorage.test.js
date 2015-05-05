@@ -89,7 +89,7 @@ function runtests(cache) {
 
     cache.destroy('number', function () {
       cache.get('number', function (error, result) {
-        t.ok(error instanceof Error, 'destroyed definition');
+        t.ok(result === 21, 'number exists after definition is deleted: ' + result);
         // t.end();
       });
     });
