@@ -14,7 +14,7 @@
   "author": "Remy Sharp",
   "license": "MIT",
   "devDependencies": {
-    "autocache": "^0.6.0",
+    "autocache": "^0.7.0",
     "tap-bail": "0.0.0",
     "tap-spec": "^2.2.1",
     "tape": "^3.5.0"
