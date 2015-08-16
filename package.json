@@ -1,10 +1,10 @@
 {
   "name": "autocache-localstorage",
-  "version": "1.2.0",
   "description": "localStorage adapter for autocache",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test node test/*.test.js | tap-spec"
+    "test": "NODE_ENV=test node test/*.test.js | tap-spec",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
     "autocache",
@@ -13,11 +13,19 @@
   ],
   "author": "Remy Sharp",
   "license": "MIT",
+  "peerDependencies": {
+    "autocache": "^1.0.0"
+  },
   "devDependencies": {
     "autocache": "^0.7.0",
     "tap-bail": "0.0.0",
     "tap-spec": "^2.2.1",
-    "tape": "^3.5.0"
+    "tape": "^3.5.0",
+    "semantic-release": "^4.0.3"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remy/autocache-localstorage.git"
+  }
 }
