@@ -15,9 +15,14 @@ var LocalStore = (function () { // jshint ignore:line
     this.prefix = 'autocache:';
   }
 
+  LocalStore.prototype.dock = function (c) {
+    cache = c;
+    cache.emit('connect');
+  };
+
   LocalStore.prototype.toString = function () {
     return 'LocalStore(#' + localStorage.length + ')';
-  }
+  };
 
   LocalStore.prototype.get = function (sid, fn) {
     var store = this;
@@ -35,11 +40,13 @@ var LocalStore = (function () { // jshint ignore:line
     var length = localStorage.length;
     var key;
 
-
     for (var i = 0; i < length; i++) {
       key = localStorage.key(i);
       if (key.indexOf(this.prefix) === 0) {
         localStorage.removeItem(key);
+        // reverse index back
+        i--;
+        length--;
       }
     }
 
@@ -61,8 +68,24 @@ var LocalStore = (function () { // jshint ignore:line
 
   LocalStore.prototype.destroy = function (sid, fn) {
     sid = this.prefix + sid;
-    localStorage.removeItem(sid);
-    fn && fn();
+    var stored = true;
+    // if we have a callback, then we check if there was a value in the first
+    // place
+    if (fn) {
+      stored = localStorage.getItem(sid);
+    }
+
+    var error = null;
+
+    try {
+      localStorage.removeItem(sid);
+    } catch (e) {
+      error = e;
+    }
+
+    if (fn) {
+      fn(error, !!stored);
+    }
   };
 
   return LocalStore;
