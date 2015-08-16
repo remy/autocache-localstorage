@@ -13,9 +13,6 @@
   ],
   "author": "Remy Sharp",
   "license": "MIT",
-  "peerDependencies": {
-    "autocache": "^1.0.0"
-  },
   "devDependencies": {
     "autocache": "^0.7.0",
     "tap-bail": "0.0.0",
